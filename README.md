@@ -18,3 +18,13 @@ _Future_
 * maybe even a [TODO app](http://todomvc.com/)... who knows
 
 To be continued....
+
+## Getting Started
+
+To run this app, ensure you have at least the latest LTS version of node (v6.9.4 at time of writing), and the latest npm (v4.1.1 at time of writing).
+
+```bash
+npm install
+npm run build
+DEBUG=reactplayground npm start
+```
