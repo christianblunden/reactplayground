@@ -1,12 +1,13 @@
 import React from 'react';
-import Clock from './clock'
-import LoginControl from './login_control'
+import Footer from './footer'
+import AddTodo from '../containers/addtodo'
+import VisibleTodoList from '../containers/visibletodolist'
 
-const App = props => (
+const App = () => (
 <div>
-  <h1>Isomorphic</h1>
-  <Clock />
-  <LoginControl />
+  <AddTodo />
+  <VisibleTodoList />
+  <Footer />
 </div>
 )
 
