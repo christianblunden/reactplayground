@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "babel-node ./src/server.js",
+    "start": "babel-node ./src",
     "build": "webpack"
   },
   "dependencies": {
