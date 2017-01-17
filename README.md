@@ -13,7 +13,7 @@ _In progress_
 
 _Future_
 
-* use react routers over express routes
+* use isomorhpic react-router
 * potentially other JS lanagages such as [purescript](http://www.purescript.org/)
 * code re-use for [react-native](https://facebook.github.io/react-native/)
 * code re-use for desktop app using [elektron](http://electron.atom.io/)

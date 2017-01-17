@@ -3,6 +3,9 @@ import { toggleTodo } from '../actions'
 import TodoList from '../components/todolist'
 
 const getVisibleTodos = (todos, filter) => {
+  console.log("getVisibleTodos")
+  console.log(todos)
+  console.log(filter)
   switch (filter) {
     case 'SHOW_ALL':
       return todos
@@ -13,8 +16,8 @@ const getVisibleTodos = (todos, filter) => {
   }
 }
 
-const mapStateToProps = state => ({
-  todos: getVisibleTodos(state.todos, state.visibilityFilter)
+const mapStateToProps = (state, ownProps) => ({
+  todos: getVisibleTodos(state.todos, ownProps.filter)
 })
 
 const mapDispatchToProps = dispatch => ({
