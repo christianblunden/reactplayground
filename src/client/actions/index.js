@@ -3,9 +3,9 @@ export const TOGGLE_TODO = 'TOGGLE_TODO'
 export const SET_VISIBILITY = 'SET_VISIBILITY'
 
 export const VisibilityFilters = {
-  SHOW_ALL: 'SHOW_ALL',
-  SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
+  SHOW_ALL: 'all',
+  SHOW_COMPLETED: 'completed',
+  SHOW_ACTIVE: 'active'
 }
 
 let nextTodoId = 0

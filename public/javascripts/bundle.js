@@ -5610,9 +5610,9 @@ var TOGGLE_TODO = exports.TOGGLE_TODO = 'TOGGLE_TODO';
 var SET_VISIBILITY = exports.SET_VISIBILITY = 'SET_VISIBILITY';
 
 var VisibilityFilters = exports.VisibilityFilters = {
-  SHOW_ALL: 'SHOW_ALL',
-  SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
+  SHOW_ALL: 'all',
+  SHOW_COMPLETED: 'completed',
+  SHOW_ACTIVE: 'active'
 };
 
 var nextTodoId = 0;
@@ -13366,7 +13366,7 @@ var App = function App(_ref) {
     'div',
     null,
     _react2.default.createElement(_addtodo2.default, null),
-    _react2.default.createElement(_visibletodolist2.default, { filter: params.filter || 'SHOW_ALL' }),
+    _react2.default.createElement(_visibletodolist2.default, { filter: params.filter || 'all' }),
     _react2.default.createElement(_footer2.default, null)
   );
 };
@@ -13402,19 +13402,19 @@ var Footer = function Footer() {
     " ",
     _react2.default.createElement(
       _filterlink2.default,
-      { filter: 'SHOW_ALL' },
+      { filter: 'all' },
       'All'
     ),
     ", ",
     _react2.default.createElement(
       _filterlink2.default,
-      { filter: 'SHOW_ACTIVE' },
+      { filter: 'active' },
       'Active'
     ),
     ", ",
     _react2.default.createElement(
       _filterlink2.default,
-      { filter: 'SHOW_COMPLETED' },
+      { filter: 'completed' },
       'Completed'
     )
   );
@@ -13613,17 +13613,14 @@ var _todolist2 = _interopRequireDefault(_todolist);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var getVisibleTodos = function getVisibleTodos(todos, filter) {
-  console.log("getVisibleTodos");
-  console.log(todos);
-  console.log(filter);
   switch (filter) {
-    case 'SHOW_ALL':
+    case 'all':
       return todos;
-    case 'SHOW_COMPLETED':
+    case 'completed':
       return todos.filter(function (t) {
         return t.completed;
       });
-    case 'SHOW_ACTIVE':
+    case 'active':
       return todos.filter(function (t) {
         return !t.completed;
       });

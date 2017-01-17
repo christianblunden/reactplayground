@@ -10,9 +10,6 @@ import routes from '../client/routes'
 var router = express.Router();
 let store = createStore(todoReducers)
 
-const initialState = store.getState();
-console.log(initialState)
-
 /* GET home page. */
 router.get('*', (req, res, next) => {
   match({routes, location: req.url}, (error,redirectLocation,renderProps) => {
